@@ -101,3 +101,32 @@ elif valor_b > valor_a and valor_b > valor_c:
     print (f"{valor_b} eh o maior")
 else:
     print(f'{valor_c} eh o maior')
+# Outra solução pro problema 1013:
+a = int(input())
+b = int(input())
+c = int(input())
+
+
+maior_entre_a_e_b = (a + b + abs(a-b)) / 2
+maior_entre_a_b_e_c = (maior_entre_a_e_b + c + abs(maior_entre_a_e_b - c)) / 2
+
+print(f"{maior_entre_a_b_e_c} eh o maior !")
+
+
+
+# Problema 01 letcode - "twosum":
+    
+def TwoSum(self, nums: list[int], target: int):
+        
+        dicionario_de_numeros = {}
+
+        for indice, numeros in enumerate(nums):
+
+            complemento = target - numeros
+
+            if complemento in dicionario_de_numeros:
+                return [dicionario_de_numeros[complemento], indice]
+            
+            dicionario_de_numeros[numeros] = indice
+        
+        return []
