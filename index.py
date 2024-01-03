@@ -130,3 +130,12 @@ def TwoSum(self, nums: list[int], target: int):
             dicionario_de_numeros[numeros] = indice
         
         return []
+# Outra implementação:
+def TwoSum(target: int, numeros: list[int]):
+    
+    tamanho_da_lista = len(numeros)
+
+    for i in range(tamanho_da_lista):
+         for j in range(i + 1, tamanho_da_lista):
+              if numeros[j] == target - numeros[i]:
+                   return [i, j]
