@@ -139,3 +139,15 @@ def TwoSum(target: int, numeros: list[int]):
          for j in range(i + 1, tamanho_da_lista):
               if numeros[j] == target - numeros[i]:
                    return [i, j]
+              
+# Problema 1015 becroud:
+import math
+
+x1,y1 = map(float, input().split()) 
+x2,y2 = map(float, input().split())
+
+distancia = ((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+raiz_da_distancia = math.sqrt(distancia)
+
+print(f"{raiz_da_distancia:.4f}")
